@@ -19,3 +19,9 @@
 (function (name) {
   console.log("Hello " + name);
 })("Yuvraj");
+
+for (var i = 0; i < 3; i++) {
+  console.log(i);
+}
+console.log(i); // 3  ❌ (leaks outside)
+
