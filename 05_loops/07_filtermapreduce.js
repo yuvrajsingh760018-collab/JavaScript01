@@ -2,7 +2,7 @@ const newNumbers = [1,2,3,4,4,5,6,7,8,9,10];
 const newms = newNumbers.map((num)=> num + 10);
 
 /// we can use the map more than one and afterward we can apply the channing methods
-// executing the multiple method at the ssame time is known as chaning 
+// executing the multiple method at the ssame time is known as channing 
 
 const news = newNumbers
                .map((num) => num *10)
