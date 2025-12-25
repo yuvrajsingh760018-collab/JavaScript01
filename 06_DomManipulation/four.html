@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom part 4</title>
+</head>
+<body style="background-color: #212121; color:#fff";>
+    <ul class="language">
+        <li>Javascipt</li>
+    </ul>
+</body>
+<script>
+    // code for adding the li tag 
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.innerHTML =`${langName}`
+        document.querySelector('.language').appendChild(li)
+        //appendChild(li)
+    }
+    addLang("python")
+    addLang("typescipt")
+
+    function optimisedaddlang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    optimisedaddlang('goland');
+
+    //edit
+    const secondlang = document.querySelector("Li:nth-child(2)")
+    // secondlang.innerHTML = "Mojo"
+    const newli = document.createElement('li');
+    newli.textContent = 'Mojo'
+    secondlang.replaceWith(newli)
+
+    // change the first element content 
+    const firstlang = document.querySelector("Li:first-child")
+    firstlang.outerHTML = '<li>TypeScript</li>'
+
+
+    // to remove the last element 
+    const lastelement = document.querySelector('li:last-child')
+    lastelement.remove();
+</script>
+</html>
